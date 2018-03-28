@@ -1,0 +1,13 @@
+
+<h1>
+  People
+</h1>
+Поиск
+<input type="text" #buttonOn [(ngModel)]="searchStr">
+<button (click)="onKup(buttonOn.value)">Кнопка</button>
+<p>{{ textOn }}</p>
+<app-people
+  *ngFor="let p of people | search:searchStr"
+  [human]="p"
+>
+</app-people>

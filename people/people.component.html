@@ -1,0 +1,11 @@
+<h2
+  [ngClass]="{'newclass': addClass}"
+  (click)="onShow(human)"
+>{{human.index}} {{human.name}}</h2>
+<div
+  (click)="onClick()"
+>Кнопка</div>
+<app-friends
+  *ngFor="let f of frends"
+  [friend]="f"
+></app-friends>
